@@ -1,4 +1,5 @@
 import Head from "next/head"
+import DummyMain from "../components/DummyMain"
 
 const Landing = () => {
     return (
