@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "extract": "NODE_ENV=development lingui extract",
-    "compile": "lingui compile"
+    "compile": "lingui compile",
+    "prepare": "husky install",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@lingui/react": "^3.6.0",
@@ -20,6 +22,8 @@
     "@babel/core": "^7.13.8",
     "@lingui/cli": "^3.6.0",
     "@lingui/macro": "^3.6.0",
-    "babel-plugin-macros": "^2.8.0"
+    "babel-plugin-macros": "^2.8.0",
+    "husky": "^5.1.3",
+    "prettier": "^2.2.1"
   }
 }
