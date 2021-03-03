@@ -4,8 +4,8 @@
 
 This template is build with the followings frameworks and libraries:
 
--   Next.js: To manage SSG and SSR, Routing and i18n.
--   styled-components: To write CSS in JS.
+- Next.js: To manage SSG and SSR, Routing and i18n.
+- styled-components: To write CSS in JS.
 
 This repository was bootstraped with next.js cli.
 
