@@ -1,2 +1,8 @@
-export * as en from "./en/messages.json"
-export * as es from "./es/messages.json"
+import en from "./en-US/messages.json"
+import es from "./es/messages.json"
+
+export default {
+  "en-US": en,
+  en,
+  es,
+}
