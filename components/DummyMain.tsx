@@ -10,11 +10,11 @@ const Container = styled.div`
 `
 
 const Title = styled.h1`
-  color: ${(props) => props.theme.colors.content.primary};
+  color: ${(props) => props.theme.palette.primary.main};
 `
 
 const SubTitle = styled.h2`
-  color: ${(props) => props.theme.colors.content.secondary};
+  color: ${(props) => props.theme.palette.secondary.main};
 `
 
 const DummyMain = () => {

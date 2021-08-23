@@ -3,7 +3,12 @@ import messages from "../locales/index"
 
 const usei18n = () => {
   const { locale } = useRouter()
-  const translates = messages[locale] || {}
+  let translates
+  if (locale) {
+    translates = messages[locale] || {}
+  } else {
+    translates = {}
+  }
 
   return [locale, translates]
 }
