@@ -1,5 +1,5 @@
-import { black } from './variables';
-import { createGlobalStyle } from "styled-components"
+import { black } from './variables'
+import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
     html,

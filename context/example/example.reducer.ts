@@ -1,17 +1,11 @@
-import {
-  ExampleActionTypes,
-  INCREMENT,
-} from './example.actions.types'
+import { ExampleActionTypes, INCREMENT } from './example.actions.types'
 import { ExampleStore } from './example.reducer.types'
 
 export const initialExampleStore: ExampleStore = {
   counter: 0
 }
 
-export const exampleReducer = (
-  state: ExampleStore,
-  action: ExampleActionTypes
-): ExampleStore => {
+export const exampleReducer = (state: ExampleStore, action: ExampleActionTypes): ExampleStore => {
   switch (action.type) {
     case INCREMENT:
       return {

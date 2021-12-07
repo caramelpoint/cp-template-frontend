@@ -1,19 +1,16 @@
 interface ExampleServiceParameters {
-  url: string,
+  url: string
 }
 
 class ExampleService {
-
-  constructor() {
-  }
+  constructor() {}
 
   async exampleMethod({ url }: ExampleServiceParameters): Promise<void> {
     console.log(url)
   }
-
 }
 
-const instance = new ExampleService();
-Object.freeze(instance);
+const instance = new ExampleService()
+Object.freeze(instance)
 
-export default instance;
+export default instance

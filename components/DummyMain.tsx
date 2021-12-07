@@ -1,6 +1,6 @@
-import React from "react"
-import { Trans } from "@lingui/macro"
-import styled from "styled-components"
+import { Trans } from '@lingui/macro'
+import React, { ReactElement } from 'react'
+import styled from 'styled-components'
 
 const Container = styled.div`
   width: 80%;
@@ -17,7 +17,7 @@ const SubTitle = styled.h2`
   color: ${(props) => props.theme.palette.secondary.main};
 `
 
-const DummyMain = () => {
+const DummyMain = (): ReactElement => {
   return (
     <Container>
       <Title>

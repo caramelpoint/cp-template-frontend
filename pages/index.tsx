@@ -1,7 +1,8 @@
-import Head from "next/head"
-import DummyMain from "../components/DummyMain"
+import Head from 'next/head'
+import { ReactElement } from 'react'
+import DummyMain from '../components/DummyMain'
 
-const Landing = () => {
+const Landing = (): ReactElement => {
   return (
     <div>
       <Head>

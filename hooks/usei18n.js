@@ -1,5 +1,5 @@
-import { useRouter } from "next/router"
-import messages from "../locales/index"
+import { useRouter } from 'next/router'
+import messages from '../locales/index'
 
 const usei18n = () => {
   const { locale } = useRouter()
