@@ -1,11 +1,10 @@
-import { black } from './variables'
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
     html,
     body {
-        color: ${(props) => props.theme.palette.common.white};
-        background-color:${(props) => props.theme.palette.common.black};
+        color: ${({ theme }) => theme.palette.text};
+        background-color:${({ theme }) => theme.palette.background};
         padding: 0;
         margin: 0;
         font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
