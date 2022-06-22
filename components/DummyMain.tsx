@@ -6,15 +6,19 @@ const Container = styled.div`
   width: 80%;
   margin: 0 auto;
   text-align: center;
-  background-color: #3e3e3e;
+  background-color: ${({ theme }) => theme.palette.background};
 `
 
 const Title = styled.h1`
-  color: ${(props) => props.theme.palette.primary.main};
+  color: ${({ theme }) => theme.palette.primary};
 `
 
 const SubTitle = styled.h2`
-  color: ${(props) => props.theme.palette.secondary.main};
+  color: ${({ theme }) => theme.palette.secondary};
+`
+
+const Text = styled.span`
+  color: ${({ theme }) => theme.palette.text};
 `
 
 const DummyMain = (): ReactElement => {
@@ -26,6 +30,9 @@ const DummyMain = (): ReactElement => {
       <SubTitle>
         <Trans id="dummyMainSubtitle">This is a sub title</Trans>
       </SubTitle>
+      <Text>
+        <Trans id="dummyMainText">And this is a text</Trans>
+      </Text>
     </Container>
   )
 }
