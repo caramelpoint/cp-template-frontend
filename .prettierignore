@@ -6,4 +6,9 @@ public
 
 # Files
 package-lock.json
-yarn.lock
+
+# compiled output
+/dist
+.npmrc
+coverage
+.czrc
