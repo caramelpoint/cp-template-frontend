@@ -7,7 +7,6 @@ This template is build with the followings frameworks and libraries:
 - Next.js: To manage SSG and SSR, Routing and i18n.
 - styled-components: To write CSS in JS.
 - Typescript
-- @CaramelPoint/Contuxt
 - Lingui.js: To manage the translations and extract the base text to implement i18n.
 
 This repository was bootstraped with next.js cli.
