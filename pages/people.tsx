@@ -37,12 +37,13 @@ type ServerProps = {
   props: PeopleType
 }
 
-const fetchPeople = async (): Promise<Person[]> => {
+const fetchPeople = async (): Promise<Person[]> => { //this function hits the API and save the data at people as a json file.
   const res = await fetch('http://swapi.dev/api/people/')
   const people: FetchPeople = await res.json()
   return people.results
 }
 
+//here, we call the previous func, but on the server side, "people" is the final object than we will pass to the component.
 export const getServerSideProps = async (): Promise<ServerProps> => {
   const data = await fetchPeople()
 
@@ -54,14 +55,16 @@ export const getServerSideProps = async (): Promise<ServerProps> => {
 }
 
 const People = ({ people }: InferGetServerSidePropsType<typeof getServerSideProps>): JSX.Element => {
+  //at useQuery, we pass 3 attributes: a unique key, the function that makes the fetch, and a initial data,
+  //this provide initialData to a query to prepopulate its cache if empty, we pass "people",which we get in the previous function
   const { data, status } = useQuery('people', fetchPeople, { initialData: people })
   console.log(data, status)
   return (
     <InfoBox>
       <Title>People</Title>
-      {people.map((person, index) => (
+      {status === 'success' ? people.map((person, index) => ( //we can work with the RQ returned element, status
         <div key={index}>{person.name}</div>
-      ))}
+      )) : <div>error</div>}
     </InfoBox>
   )
 }
