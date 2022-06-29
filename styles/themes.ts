@@ -12,7 +12,7 @@ import {
   TURQUOISE,
   ZAMBEZI,
   EMERALD,
-  CORAL_RED
+  CORAL_RED,
 } from './variables'
 
 // Recieves alpha as %, and transforms it to hex
@@ -41,7 +41,7 @@ export const defaultTheme: DefaultTheme = {
       turquoise: TURQUOISE,
       psychedelicPurple: PSYCHEDELIC_PURPLE,
       white: WHITE,
-      black: BLACK
+      black: BLACK,
     },
 
     // Theme colors (always prioritize using these over the common colors)
@@ -63,7 +63,7 @@ export const defaultTheme: DefaultTheme = {
 
     // Status
     success: EMERALD,
-    error: CORAL_RED
+    error: CORAL_RED,
   },
 
   // Breakpoints for min-width
@@ -73,23 +73,23 @@ export const defaultTheme: DefaultTheme = {
     tablet: '426px',
     desktopS: '769px',
     desktop: '1440px',
-    desktopL: '1920px'
+    desktopL: '1920px',
   },
 
   borders: {
     primary: `1px solid ${WHITE + getOpacityInHex(25)}`,
-    secondary: `2px solid ${BLUE_VIOLET + getOpacityInHex(40)}`
+    secondary: `2px solid ${BLUE_VIOLET + getOpacityInHex(40)}`,
   },
 
   shadows: {
     primary: `inset 0px 4px 4px ${BLACK}`,
-    secondary: `inset 0px 4px 4px ${BLACK + getOpacityInHex(80)}`
+    secondary: `inset 0px 4px 4px ${BLACK + getOpacityInHex(80)}`,
   },
 
   fonts: {
     primary: 'sans-serif',
-    secondary: 'Arial'
-  }
+    secondary: 'Arial',
+  },
 }
 
 export default defaultTheme
