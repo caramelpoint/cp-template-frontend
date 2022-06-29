@@ -11,9 +11,6 @@ import usei18n from '../hooks/usei18n'
 import { QueryClient, QueryClientProvider } from 'react-query'
 const queryClient = new QueryClient()
 
-import { QueryClient, QueryClientProvider } from 'react-query'
-const queryClient = new QueryClient()
-
 function MyApp({ Component, pageProps }: AppProps): ReactElement {
   const { theme, ThemeProvider } = useTheme()
 
