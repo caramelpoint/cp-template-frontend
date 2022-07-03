@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { useStoreActions, Actions, Action } from "easy-peasy";
-import { FoodModel } from "../../types/food-model.type";
+import React, { useState } from 'react'
+import { useStoreActions, Actions } from 'easy-peasy'
+import { FoodModel } from '../../types/food-model.type'
 import styled from 'styled-components'
 
 const AddBox = styled.div`
@@ -11,23 +11,20 @@ const AddBox = styled.div`
 `
 
 const AddTodo = () => {
-  const [name, setName] = useState("");
-  const [price, setPrice] = useState(0);
+  const [name, setName] = useState('')
+  const [price, setPrice] = useState(0)
 
   const add = useStoreActions((actions: Actions<FoodModel>) => actions.add)
 
   return (
     <AddBox>
-      <form onSubmit={e => {
-        e.preventDefault();
-        add({ id: Math.floor(Math.random() * 20), name: name, price: price, purchased: false })
-      }}>
-        <input
-          type="text"
-          value={name}
-          onChange={e => setName(e.target.value)}
-          placeholder="Add food to the list..."
-        />
+      <form
+        onSubmit={e => {
+          e.preventDefault()
+          add({ id: Math.floor(Math.random() * 20), name: name, price: price, purchased: false })
+        }}
+      >
+        <input type="text" value={name} onChange={e => setName(e.target.value)} placeholder="Add food to the list..." />
         <input
           type="number"
           value={price}
@@ -37,7 +34,7 @@ const AddTodo = () => {
         <input type="submit" value="Add" />
       </form>
     </AddBox>
-  );
-};
+  )
+}
 
-export default AddTodo;
+export default AddTodo

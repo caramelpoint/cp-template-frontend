@@ -1,8 +1,8 @@
-import React from "react";
-import { Actions, useStoreActions, useStoreState } from "easy-peasy";
+import React from 'react'
+import { Actions, useStoreActions, useStoreState } from 'easy-peasy'
 import FoodItem from './FoodItem'
 import styled from 'styled-components'
-import { FoodModel, IFood } from "../../types/food-model.type";
+import { FoodModel, IFood } from '../../types/food-model.type'
 
 const InfoBox = styled.div`
   background: #edebe6;
@@ -43,11 +43,11 @@ const Todos = () => {
       <hr />
       <FoodItemBox>
         {foods.map((food: IFood, index: Number) => (
-          <FoodItem food={food} key={'food' + food.id} />
+          <FoodItem food={food} key={'food' + food.id + index} />
         ))}
       </FoodItemBox>
-    </InfoBox >
-  );
-};
+    </InfoBox>
+  )
+}
 
-export default Todos;
+export default Todos

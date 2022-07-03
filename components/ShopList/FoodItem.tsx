@@ -1,6 +1,6 @@
-import { useStoreActions, Actions, Action } from "easy-peasy";
-import { FoodModel } from "../../types/food-model.type";
-import React from "react";
+import { useStoreActions, Actions } from 'easy-peasy'
+import { FoodModel } from '../../types/food-model.type'
+import React from 'react'
 import styled from 'styled-components'
 
 const FoodRow = styled.div`
@@ -23,14 +23,10 @@ const FoodItem = ({ food }: any) => {
   const toogle = useStoreActions((actions: Actions<FoodModel>) => actions.toggle)
   return (
     <FoodRow onClick={() => toogle(food.id)} style={{ textDecoration: food.purchased ? 'line-through' : 'none' }}>
-      <span>
-        {food.name}
-      </span>
-      <span>
-        ${food.price}
-      </span>
+      <span>{food.name}</span>
+      <span>${food.price}</span>
     </FoodRow>
-  );
-};
+  )
+}
 
-export default FoodItem;
+export default FoodItem

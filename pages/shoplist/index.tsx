@@ -12,5 +12,5 @@ export default function ShopList() {
       <Foods />
       <AddFood />
     </StoreProvider>
-  );
+  )
 }
