@@ -1,16 +1,15 @@
-import React from "react";
+import React from 'react'
 
 interface Planet {
-  id: any;
-  name: string;
-  population: string;
+  id: any
+  name: string
+  population: string
   terrain: string
 }
 
 type Props = {
-  planet: any;
-};
-
+  planet: any
+}
 
 const Planet = ({ planet }: Props) => {
   return (
@@ -20,6 +19,6 @@ const Planet = ({ planet }: Props) => {
       <p>Terrain - {planet.terrain} </p>
       <hr />
     </div>
-  );
-};
-export default Planet;
+  )
+}
+export default Planet
