@@ -1,5 +1,5 @@
 import { action, thunk } from 'easy-peasy'
-import { FoodModel, IFood } from '../../types/food-model.type'
+import { FoodModel, IFood } from '../types/food-model.type'
 
 const FoodData: FoodModel = {
   foods: [
