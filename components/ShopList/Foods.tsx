@@ -39,7 +39,7 @@ const Todos = () => {
     <InfoBox>
       <h1>Food shopping´s list</h1>
       <p>Click an item to cross it out</p>
-      <TextBtn onClick={update()}>Activate thunk</TextBtn>
+      <TextBtn onClick={() => update()}>Activate thunk</TextBtn>
       <hr />
       <FoodItemBox>
         {foods.map((food: IFood, index: Number) => (
