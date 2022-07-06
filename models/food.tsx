@@ -17,10 +17,6 @@ const FoodData: FoodModel = {
     })
   }),
   add: action((state, food) => {
-    //food.id = Math.floor(Math.random() * 20);
-    //food.name = "lala";
-    //food.price = 0;
-    //food.purchased = false;
     state.foods = [...state.foods, food]
   }),
   setFood: action((state, comida: IFood[]) => {
@@ -29,7 +25,7 @@ const FoodData: FoodModel = {
 
   //Thunks
   updateThunk: thunk(async action => {
-    const comidas = [
+    const foods = [
       { id: 21, name: 'Broccoli', price: 2, purchased: false },
       { id: 22, name: 'Carrots', price: 4, purchased: true },
       { id: 23, name: 'Apple', price: 8, purchased: false },
@@ -39,7 +35,7 @@ const FoodData: FoodModel = {
 
     const response: IFood[] = await new Promise(resolve =>
       setTimeout(() => {
-        resolve(comidas)
+        resolve(foods)
       }, 300)
     )
 
