@@ -1,5 +1,6 @@
 import { createStore } from 'easy-peasy'
 import FoodData from '../models/food'
+/* eslint-disable no-undef*/
 
 describe('Foods Actions', () => {
   test('adding a food', () => {
@@ -31,6 +32,6 @@ describe('Foods Actions', () => {
 
     expect(store.getState().foods[0].purchased).toBeTruthy
   })
-});
+})
 
 export { }
